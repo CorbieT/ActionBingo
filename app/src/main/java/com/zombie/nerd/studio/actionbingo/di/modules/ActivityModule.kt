@@ -1,7 +1,6 @@
 package com.zombie.nerd.studio.actionbingo.di.modules
 
-import android.app.Activity
-import com.zombie.nerd.studio.actionbingo.di.scopes.ActivityScope
+import com.zombie.nerd.studio.actionbingo.common.FragmentHandler
 import com.zombie.nerd.studio.actionbingo.ui.MainActivity
 import dagger.Binds
 import dagger.Module
@@ -13,6 +12,10 @@ abstract class ActivityModule {
 //    @Binds
 //    @Reusable
 //    abstract fun bindActivity(appActivity: MainActivity): Activity
+
+    @Binds
+    @Reusable
+    abstract fun bindFragmentHandler(activity: MainActivity): FragmentHandler
 
     @ContributesAndroidInjector(modules = [FragmentsModule::class])
     abstract fun mainActivity(): MainActivity
