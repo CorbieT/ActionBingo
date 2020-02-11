@@ -15,27 +15,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <RadioButton
             android:id="@+id/field_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:button="@null"
             android:text="3x3"/>
 
-        <Button
+        <RadioButton
+            android:id="@+id/field_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4x4"/>
+
+        <RadioButton
             android:id="@+id/field_5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5x5"/>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+    </RadioGroup>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

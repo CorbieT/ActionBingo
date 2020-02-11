@@ -2,7 +2,7 @@ package com.zombie.nerd.studio.actionbingo.di.modules
 
 import com.zombie.nerd.studio.actionbingo.ui.fragments.TestFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.chooser.FieldChooserFragment
-import com.zombie.nerd.studio.actionbingo.ui.fragments.figure.FillFigureFragment
+import com.zombie.nerd.studio.actionbingo.ui.fragments.game.GameFieldFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.main.MainFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.room.RoomCreatorFragment
 import dagger.Module
@@ -20,8 +20,8 @@ abstract class FragmentsModule {
     abstract fun fieldChooserFragment(): FieldChooserFragment
 
     @ContributesAndroidInjector
-    abstract fun fillFigureFragment(): FillFigureFragment
+    abstract fun roomCreatorFragment(): RoomCreatorFragment
 
     @ContributesAndroidInjector
-    abstract fun roomCreatorFragment(): RoomCreatorFragment
+    abstract fun gameFieldFragment(): GameFieldFragment
 }
