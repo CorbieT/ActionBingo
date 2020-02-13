@@ -11,8 +11,6 @@ class FieldChooserFragment : BaseFragment(R.layout.fragment_field_chooser) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        field_3.setOnClickListener { fragmentHandler.createFragmentWithBack(GameFieldFragment()) }
-        field_4.setOnClickListener { fragmentHandler.createFragmentWithBack(GameFieldFragment()) }
-        field_5.setOnClickListener { fragmentHandler.createFragmentWithBack(GameFieldFragment()) }
+        next_button_chooser.setOnClickListener { fragmentHandler.createFragmentWithBack(GameFieldFragment()) }
     }
 }

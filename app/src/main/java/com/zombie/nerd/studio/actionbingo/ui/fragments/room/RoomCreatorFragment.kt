@@ -10,6 +10,6 @@ import kotlinx.android.synthetic.main.fragment_room_creator.*
 class RoomCreatorFragment : BaseFragment(R.layout.fragment_room_creator) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        next_button.setOnClickListener { fragmentHandler.createFragmentWithBack(FieldChooserFragment()) }
+        next_button_creator.setOnClickListener { fragmentHandler.createFragmentWithBack(FieldChooserFragment()) }
     }
 }

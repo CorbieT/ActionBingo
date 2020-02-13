@@ -6,9 +6,10 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:text="ВЫБЕРИТЕ РАЗМЕР ПОЛЯ"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,32 +17,49 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="50dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/next_button_chooser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/textView2">
 
         <RadioButton
             android:id="@+id/field_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3x3"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="3x3" />
 
         <RadioButton
             android:id="@+id/field_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4x4"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="4x4" />
 
         <RadioButton
             android:id="@+id/field_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5x5"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="5x5" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/next_button_chooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:text="Далее  "
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,21 +18,21 @@
 
         <Button
             android:id="@+id/start"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="START" />
+            android:text="ИГРАТЬ ОНЛАЙН" />
 
         <Button
             android:id="@+id/test"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TEST" />
+            android:text="ИГРАТЬ ОФФЛАЙН" />
 
         <Button
             android:id="@+id/settings"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SETTINGS" />
+            android:text="НАСТРОЙКИ" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

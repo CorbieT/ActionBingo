@@ -5,6 +5,8 @@ import android.view.View
 import com.zombie.nerd.studio.actionbingo.R
 import com.zombie.nerd.studio.actionbingo.ui.fragments.BaseFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.TestFragment
+import com.zombie.nerd.studio.actionbingo.ui.fragments.chooser.FieldChooserFragment
+import com.zombie.nerd.studio.actionbingo.ui.fragments.game.GameFieldFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.room.RoomCreatorFragment
 import kotlinx.android.synthetic.main.fragment_main.*
 
@@ -16,7 +18,7 @@ class MainFragment : BaseFragment(R.layout.fragment_main) {
             fragmentHandler.createFragmentWithBack(RoomCreatorFragment())
         }
         test.setOnClickListener {
-            fragmentHandler.createFragmentWithBack(TestFragment())
+            fragmentHandler.createFragmentWithBack(FieldChooserFragment())
         }
     }
 }
