@@ -5,11 +5,12 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.ViewGroup
 import android.widget.GridLayout
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.zombie.nerd.studio.actionbingo.R
 import kotlinx.android.synthetic.main.fragment_room_creator.view.*
 
-class BingoView(context: Context, attrs: AttributeSet) : GridLayout(context, attrs) {
+class BingoView2(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
     private var cellCount = 0
     private var cells = mutableListOf<TextView>()
@@ -22,18 +23,30 @@ class BingoView(context: Context, attrs: AttributeSet) : GridLayout(context, att
             a.recycle()
         }
 
+        this.orientation = VERTICAL
         createCells()
     }
 
     private fun createCells() {
-        columnCount = cellCount
-        rowCount = cellCount
-
-        for (i in 1..cellCount * cellCount) {
-            val textView = createTextView()
-            textView.text = i.toString()
-            this.addView(textView).also { cells.add(textView) }
+        for (i in 1..cellCount) {
+            val container = createCellContainer()
+            for (j in 1..cellCount) {
+                val textView = createTextView()
+                textView.text = "#TEST"
+                container.addView(textView).also { cells.add(textView) }
+            }
+            this.addView(container)
         }
+    }
+
+    private fun createCellContainer(): LinearLayout {
+        val linearLayout = LinearLayout(context)
+        linearLayout.orientation = HORIZONTAL
+
+        val layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
+        linearLayout.layoutParams = layoutParams
+        layoutParams.weight = 1f
+        return linearLayout
     }
 
     private fun createTextView(): TextView {
@@ -50,10 +63,8 @@ class BingoView(context: Context, attrs: AttributeSet) : GridLayout(context, att
             return@setOnLongClickListener true
         }
 
-        val textViewParams = LayoutParams(spec(UNDEFINED, FILL,1f), spec(UNDEFINED, FILL,1f))
-//        textViewParams.width = LayoutParams.MATCH_PARENT
-//        textViewParams.height = LayoutParams.MATCH_PARENT
-//        textViewParams.setGravity(Gravity.CENTER)
+        val textViewParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
+        textViewParams.weight = 1f
         textView.layoutParams = textViewParams
         return textView
     }
