@@ -23,7 +23,7 @@ class MainActivity : DaggerAppCompatActivity(), FragmentHandler {
             .commit()
     }
 
-    override fun createFragmentWithBack(fragment: Fragment, tag: String?) {
+    override fun createFragmentWithBackStack(fragment: Fragment, tag: String?) {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.container, fragment)

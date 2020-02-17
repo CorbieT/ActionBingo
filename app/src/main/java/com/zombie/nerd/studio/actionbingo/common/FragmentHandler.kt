@@ -4,5 +4,5 @@ import androidx.fragment.app.Fragment
 
 interface FragmentHandler {
     fun createFragment(fragment: Fragment)
-    fun createFragmentWithBack(fragment: Fragment, tag: String? = null)
+    fun createFragmentWithBackStack(fragment: Fragment, tag: String? = null)
 }
