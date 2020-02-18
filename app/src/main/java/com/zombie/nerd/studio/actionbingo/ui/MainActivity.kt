@@ -6,7 +6,6 @@ import com.zombie.nerd.studio.actionbingo.R
 import com.zombie.nerd.studio.actionbingo.common.FragmentHandler
 import com.zombie.nerd.studio.actionbingo.ui.fragments.main.MainFragment
 import dagger.android.support.DaggerAppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : DaggerAppCompatActivity(), FragmentHandler {
 

@@ -2,26 +2,37 @@ package com.zombie.nerd.studio.actionbingo.ui.view
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.Gravity
-import android.view.ViewGroup
-import android.widget.GridLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.zombie.nerd.studio.actionbingo.R
-import kotlinx.android.synthetic.main.fragment_room_creator.view.*
+import java.lang.Exception
 
-class BingoView2(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+class BingoView2(context: Context, private var cellCount: Int = 0) : LinearLayout(context) {
 
-    private var cellCount = 0
+//    private var attrs: AttributeSet? = null
+
     private var cells = mutableListOf<TextView>()
 
+    //    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {
+//        this.attrs = attrs
+//    }
+//
+//    constructor(context: Context, attrs: AttributeSet, cellCount: Int = 0) : super(context, attrs) {
+//        this.cellCount = cellCount
+//        this.attrs = attrs
+//    }
+
     init {
-        val a = context.theme.obtainStyledAttributes(attrs, R.styleable.BingoView, 0, 0)
-        try {
-            cellCount = a.getInteger(R.styleable.BingoView_cellCount, 0)
-        } finally {
-            a.recycle()
-        }
+//        if (cellCount == 0) {
+//            val a = context.theme.obtainStyledAttributes(attrs, R.styleable.BingoView2, 0, 0)
+//            try {
+//                cellCount = a.getInteger(R.styleable.BingoView2_cellCount, 0)
+//            } catch (e: Exception) {
+//                a.recycle()
+//            }
+//        }
 
         this.orientation = VERTICAL
         createCells()

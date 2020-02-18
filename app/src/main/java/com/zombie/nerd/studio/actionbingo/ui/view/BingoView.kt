@@ -3,11 +3,9 @@ package com.zombie.nerd.studio.actionbingo.ui.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
-import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.TextView
 import com.zombie.nerd.studio.actionbingo.R
-import kotlinx.android.synthetic.main.fragment_room_creator.view.*
 
 class BingoView(context: Context, attrs: AttributeSet) : GridLayout(context, attrs) {
 

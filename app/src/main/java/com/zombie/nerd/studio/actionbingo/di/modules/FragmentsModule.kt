@@ -2,6 +2,7 @@ package com.zombie.nerd.studio.actionbingo.di.modules
 
 import com.zombie.nerd.studio.actionbingo.ui.fragments.TestFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.chooser.FieldChooserFragment
+import com.zombie.nerd.studio.actionbingo.ui.fragments.fill.FillGameFieldFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.game.GameFieldFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.main.MainFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.mode.OnlineModeFragment
@@ -36,4 +37,7 @@ abstract class FragmentsModule {
 
     @ContributesAndroidInjector
     abstract fun settingsFragment(): SettingsFragment
+
+    @ContributesAndroidInjector
+    abstract fun fillGameFieldFragment(): FillGameFieldFragment
 }

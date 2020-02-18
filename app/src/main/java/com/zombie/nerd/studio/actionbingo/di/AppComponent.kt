@@ -1,7 +1,6 @@
 package com.zombie.nerd.studio.actionbingo.di
 
 import android.content.Context
-import com.zombie.nerd.studio.actionbingo.App
 import com.zombie.nerd.studio.actionbingo.di.modules.ActivityModule
 import com.zombie.nerd.studio.actionbingo.di.modules.AppModule
 import dagger.BindsInstance

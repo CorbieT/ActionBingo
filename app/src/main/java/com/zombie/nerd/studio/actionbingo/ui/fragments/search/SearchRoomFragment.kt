@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.zombie.nerd.studio.actionbingo.R
 import com.zombie.nerd.studio.actionbingo.ui.fragments.BaseFragment
+import com.zombie.nerd.studio.actionbingo.ui.fragments.fill.FillGameFieldFragment
 import com.zombie.nerd.studio.actionbingo.ui.fragments.game.GameFieldFragment
 import kotlinx.android.synthetic.main.fragment_search_room.*
 
